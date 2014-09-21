@@ -1,0 +1,311 @@
+x<- makeCacheMatrix(b)
+y<- cacheSolve(x)
+y
+library(swirl)swirl()
+library(swirl)
+swirl()
+1:20
+pi:10
+15:1
+?:
+?':'
+seq(1,20)
+seq(0,10, by=0.5)
+my_seq <- seq(5, 10, length=30)
+length(my_seq)
+1:length(my_seq)
+seq(along = my_seq)
+seq_along(my_seq)
+rep(0, tmies=40)
+rep(0, times=40)
+rep(c((0,1,2), times=10)
+rep(c(0,1,2), times=10)
+rep(c(0,1,2), each=10)
+library(swirl)
+swirl()
+num_vect <- c(0.5,55,-10,6)
+tf <- "num_vect is less than 1"
+tf <- num_vect <1 if(num_vect < 1) tf
+tf <- "num_vect < 1" if(num_vect < 1) tf
+info()
+tf <- num_vect < 1
+tf
+num_vect >=6
+my_char <- c("My", "name", "is")
+my_char
+paste(my_char, collapse=" ")
+c(my_char, "Simon Platt")
+my_name <- c(my_char, "Simon")
+my_name
+paste(my_name, collapse = " ")
+paste("Hello", "world!", sep= " ")
+paste(1:3, c("X", "Y", "Z"), sep ="")
+paste(LETTERS, 1:4, sep = "-")
+library(swirl)
+swirl()
+x <- c(44, NA,5, NA)
+x*3
+y <- rnorm(1000)
+z <- rep(NA, 1000)
+my_data <- sample(c(y,z), 100)
+my_na <-is.na(my_data)
+my_na
+my_data == NA
+sum(my_na)
+my_data
+0?0
+0/0
+Inf-Inf
+x
+x[1:10]
+x[is.na(x)]
+y<-x[!is.na(x)]
+y
+y[y>0]
+x[x>0]
+x[!is.na(x) & x>0]
+x[xc(3,5,7)]
+x[c(3,5,7)]
+x[0]
+x[3000]
+x[c(-2,-10)]
+x[-c(2,10)]
+vect <- c(foo =11, bar = 2, norf = NA)
+vet
+vect
+names(vect)
+vect2 <- c(11,2,na)
+vect2 <- c(11,2,NA)
+names(vect2) <- c("foo", "bar", "norf")
+identical(vect,vect2)
+vect["bar"]
+vect[c('foo', "bar")]
+my_vector <- c(1:20)
+my_vector <- 1:20
+my_vector
+dim(my_vector)
+length(my_vector)
+dim(my_vector) <- c(4,5)
+dim(my_vector)
+attributes(my_vector)
+my_vector
+class(my_vector)
+my_matrix <- my_vector
+?matrix
+my_matrix2 <- matrix(data = 1:20, nrow=4, ncol=5)
+identical(my_matrix, my_matrix2)
+patients <- c("Bill", "Gina", "Kelly", "Sean")
+cbind(my_matrix, patients)
+cbind(patients, my_matrix)
+my_data <- data.frame(patients,my_matrix)
+my_data
+class(my_data)
+cnames("patient", "age", "weight", "bp", "rating", "test")
+cnames<-c("patient", "age", "weight", "bp", "rating", "test")
+colnames(my_data)<-cnames
+my_data
+install.packages("httr")
+library("httr")
+?oath_endpoints
+?oauth_endpoints
+oauth_endpoints("github")
+myapp <- oauth_app("github", "1e78b674bb8d79864140")
+?oauth_app
+myapp <- oauth_app("github", "1e78b674bb8d79864140","e2e55a4fc3e32f86d466d66407a427cbc0af5fad")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+install.packages("httpuv")
+library("httpuv")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+?GET
+req <- GET("https://api.github.com/rate_limit", config(token = github_token))#
+stop_for_status(req)#
+content(req)
+?stop_for_status
+?content
+req <- GET("https://api.github.com/users/jtleek/repos", config(token = github_token))#
+stop_for_status(req)#
+content(req)
+library("lattice")
+a <- rnorm(100)
+b <- rnorm(100)
+xyplot(a,b)
+?xyplot
+xyplot(a)
+library(nlme)
+?dataframe
+xyplot(weight ~ Time | Diet, BodyWeight)
+?panel.lmline
+?lines
+library(datasets)#
+data(airquality)#
+p <- xyplot(Ozone ~ Wind | factor(Month), data = airquality)
+p
+?trellis.par.set
+?par
+?splom
+library(datasets)#
+data(airquality)
+qplot(Wind, Ozone, data = airquality, facets = . ~ factor(Month))
+library(ggplot2)
+install.packages("ggplot2")
+library(ggplot2)
+qplot(Wind, Ozone, data = airquality, facets = . ~ factor(Month))
+library(datasets)#
+data(airquality)
+qplot(Wind, Ozone, data = airquality, facets = . ~ factor(Month))
+qplot(Wind, Ozone, data = airquality)
+qplot(Wind, Ozone, data = airquality, geom = "smooth")
+airquality = transform(airquality, Month = factor(Month))#
+qplot(Wind, Ozone, data = airquality, facets = . ~ Month)
+data(airquality)
+qplot(Wind, Ozone, data = airquality, facets = . ~ factor(Month))
+?geom
+?qplot
+g <- ggplot(movies, aes(votes, rating))#
+print(g)
+qplot(votes, rating, data = movies)
+qplot(votes, rating, data = movies) + geom_smooth()
+qplot(votes, rating, data = movies) + stats_smooth("loess")
+qplot(votes, rating, data = movies, panel = panel.loess)
+qplot(votes, rating, data = movies, smooth = "loess")
+class(xyplot())
+data(airquality)
+class(xyplot(wind, data = airquality))
+class(xyplot(ind, data = airquality))
+class(xyplot(Wind, data = airquality))
+class(xyplot(airquality$Wind, data = airquality))
+qplot(votes, rating, data = movies) + geom_smooth()
+?Sys.setlocale
+library(swirl)
+swirl()
+library(dplyr)
+tbl_df(mydf)
+cran <- tbl_df(mydf)
+rm("mydf")
+cran
+?group_by()
+?group_by
+by_package <- group_by(cran,package)
+by_package
+summarize(by_package)
+summarize(by-package,mean(size))
+summarize(by_package,mean(size))
+?n
+pack_sum <- summarize(by_package,#
+                      count = n() ,#
+                      unique =n_distinct(ip_id) ,#
+                      countries = n_distinct(country),#
+                      avg_bytes = mean(size))
+submit()
+?n_distinct
+submit()
+reset()
+submit()
+pack_sum <- summarize(by_package,#
+                      count = n(),#
+                      unique =n_distinct(ip_id),#
+                      countries = n_distinct(country),#
+                      avg_bytes = mean(size))
+submit()
+?n
+pack_sum <- summarize(by_package,#
+                    n(),#
+                      n_distinct(ip_id),#
+                      n_distinct(country),#
+                      mean(size))
+submit()
+help()
+skip()
+pack_sum
+quantile(pack_sum$count, probs = 0.99)
+filter(pack_sum, count > 679)
+top_counts <-filter(pack_sum, count > 679)
+top_counts
+head(top_counts, 20)
+arrange(top_counts, count, desc = T)
+?arrange
+arrange(top_counts, count,)
+arrange(.top_counts, count)
+arrange(top_counts, count)
+arrange(top_counts, desc(count))
+quantile(pack_sum$unique, probs = 0.99)
+filter(pack_sum, unique > 465)
+top_unique <- filter(pack_sum, unique > 465)
+top_unique
+arrange(top_unique, desc(unique))
+submit()
+cran %>%#
+  select() %>%#
+  ip_id %>%#
+  country %>%#
+  package %>%#
+  size %>%#
+	print
+cran %>%#
+  select() %>%#
+  ip_id#
+  country#
+  package#
+  size#
+	print
+skip()
+?mutate
+submit()
+cran %>%#
+  select(ip_id, country, package, size) %>%#
+  mutate(cran, size_mb=size/ 2^20) %>%#
+  print
+cran %>%#
+  select(ip_id, country, package, size) %>%#
+  mutate(, size_mb=size/ 2^20) %>%#
+  print
+skip()
+# Use filter() to select all rows for which size_mb is#
+# less than or equal to (<=) 0.5.#
+##
+# If you want your results printed to the console, add#
+# print to the end of your chain.#
+#
+cran %>%#
+  select(ip_id, country, package, size) %>%#
+  mutate(size_mb = size / 2^20) %>%#
+  filter(size_mb <= 0.5)
+submit()
+cran %>%#
+  select(ip_id, country, package, size) %>%#
+  mutate(size_mb = size / 2^20) %>%#
+  filter(size_mb <= 0.5) %>%#
+  print
+submit()
+skip()
+cran %>%#
+  select(ip_id, country, package, size) %>%#
+  mutate(size_mb = size / 2^20) %>%#
+  filter(size_mb <= 0.5) %>%#
+  arrange(desc(siz_mb))
+cran %>%#
+  select(ip_id, country, package, size) %>%#
+  mutate(size_mb = size / 2^20) %>%#
+  filter(size_mb <= 0.5) %>%#
+  arrange(desc(size_mb))
+submit()
+skip()
+ls
+ls()
+setwd("./Documents/Coursera/GettingandCleaningData/project")
+dir()
+source("run_analysis.R")
+dir()
+ls()
+data1 <- read.table("meanData.txt", header = T)
+?read.table
+dir(./data/train)
+dir("./data/train")
+dir("./data/test")
+dir(./data)
+dir
+dir("./data")
+source(run_analysis.R)
+dir()
+source("run_analysis.R")
+dir()
